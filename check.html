@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" id="checkbox1">php
+        <br>
+        <input type="checkbox" id="checkbox2">javascript
+        <br>
+        <input type="checkbox" id="checkbox3">asp
+        <br>
+        <input type="checkbox" id="checkbox4">ruby
+        <br>
+        <input type="button" value="mostrar" onclick="contarSelecionado()">
+
+    </form>
+    <script>
+        function contarSelecionado(){
+            let cant = 0;
+            if(document.getElementById("checkbox1").checked){
+                cant++;
+            }
+            if(document.getElementById("checkbox2").checked){
+                cant++;
+            }
+            if(document.getElementById("checkbox3").checked){
+                cant++;
+            }
+            if(document.getElementById("checkbox4").checked){
+                cant++;
+
+            }
+            alert("conoce "+ cant+ " lenguages");
+        }
+    </script>
+</body>
+</html>

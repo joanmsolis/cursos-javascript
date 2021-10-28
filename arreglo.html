@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    function cargar(sueldo){
+        for(let f = 0; f < sueldo.length; f++){
+            let v = prompt("ingrese su sueldo");
+            sueldo[f] = parseInt(v);
+
+        }
+
+    }
+
+    function calculararSueldo(){
+    let total = 0;
+    for(let f = 0; f < sueldo.length; f++){
+        total = total + sueldo;
+        document.write(sueldo[f]+ "<br>");
+
+    }
+    document.write("cantida del sueldo actual" + total);
+
+    }
+    let sueldo;
+    sueldo = new Array(5);
+    cargar(sueldo);
+    calculararSueldo(sueldo);
+    </script>
+</body>
+</html>

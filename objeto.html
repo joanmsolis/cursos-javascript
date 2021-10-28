@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <input type="button" value="open" onclick="abrir()">
+    <br>
+    <input type="button" value="open con parametro" onclick="abrirParametro()">
+    <br>
+    <input type="button" value="alert" onclick="alerta()">
+    <br>
+    <input type="button" value="confirm" onclick="confirmar()">
+    <br>
+    <input type="button" value="prompt" onclick="prompts()">
+    <br>
+    <input type="button" value="cambiar" onclick="redes()">
+    
+    
+  </form> 
+  <script>
+   
+      function abrir(){
+          let ventana = open();
+          ventana.document.write("estoy abriendo una segunda ventana<br>");
+          ventana.document.write("estoy escribiendo en la segunda linea");
+      }
+
+      function abrirParametro(){
+          let ventana = open('', '','status=yes,width=400,height=250,menubar=yes');
+          ventana.document.write('estoy abriendo un parametro <br>');
+      }
+      function alerta(){
+        alert("este es un alerta ")
+      }
+      function confirmar(){
+        let repuesta = confirm ("presiones algunos de los botones");
+        if(confirm == true){
+          document.write("presione el boton apcetar");
+
+        }else{
+          document.write("presione el el cancelar");
+
+        }
+
+      } 
+      function prompts(){
+
+        let cadena = prompt("cargue uma cadena: ");
+        alert("usted ingreso un: "+cadena);
+      }
+      function redes(){
+        if(window.confirm("desea salir de esta pagina y entrar a las redes sociales")){
+          window.location = "https://www.youtube.com/";
+
+        }else{
+          alert("no hay problema, siga disfrutando");
+        }
+      
+
+        }
+  </script>
+
+</body>
+</html>

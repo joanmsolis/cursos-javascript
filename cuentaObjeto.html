@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function cliente(nombre, saldo){
+            this.nombre = nombre;
+            this.saldo = saldo;
+            this.depositar = function(dinero){
+                this.saldo = this.saldo + dinero;
+            }
+            this.extraer = function(dinero){
+                this.saldo = this.saldo - dinero;
+
+            } 
+        }
+        
+ 
+
+        let cliente1;
+            cliente1 = new cliente("diego", 1500);
+            document.write("nombre del cliente " + cliente1.nombre + "<br>");
+            document.write("el saldo del cliente es: " + cliente1.saldo +"<br>");
+            cliente1.depositar(120);
+            document.write('saldo depues de depositar $120-------->' + cliente1.saldo + '<br>');
+            cliente1.extraer(1000);
+            document.write('cliente depues de extraer $1000------->' + cliente1.saldo + '<br>');
+         
+
+
+            //bloque de codigo numero quiniela
+
+            function NumeroQUiniela(nombre){
+                this.nombre = nombre;
+                this.cargarNuevo = function(){
+                    this.numero = parseInt(prompt("el numero de quiniela quiere es: " + this.nombre + "?"));
+                }
+                this.verificarSiGano = function(num){
+                    if(this.numero == num)
+                        return true;
+                    else
+                        return false;
+                    }
+
+                }
+
+                //clase de bolilllero
+
+                function bolillero(){
+                    this.numero = -1;
+                    this.sortear = function(){
+                        this.numero = parseInt(Math.random()*10)+1;
+                    }
+                }
+
+                //bloque principal
+
+                let numeroquiniela1;
+                numeroquiniela1 = new NumeroQUiniela(" juan ");
+                numeroquiniela1.cargarNuevo();
+                let numeroQUiniela2;
+                numeroQUiniela2 = new NumeroQUiniela(" ana ");
+                numeroQUiniela2.cargarNuevo();
+                let Bolillero;
+                Bolillero = new bolillero();
+                Bolillero.sortear();
+                document.write("numero sorteado" + Bolillero.numero + "<br>");
+                document.write(numeroquiniela1.nombre + " eligio " + numeroquiniela1.numero + "<br>");
+                document.write(numeroQUiniela2.nombre + " eligio " + numeroQUiniela2.numero +"<br>");
+                if(numeroquiniela1.verificarSiGano(Bolillero.numero)){
+                  document.write(numeroquiniela1.nombre + " ha ganado <br>"); 
+                }
+                if(numeroQUiniela2.verificarSiGano(Bolillero.numero)){
+                    document.write(numeroQUiniela2.nombre + " ha ganado <br> ");
+
+                }
+
+
+            
+
+            
+            
+
+        
+    </script>
+    
+</body>
+</html>

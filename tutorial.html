@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function sumar(num1,num2){
+          //  let reslt = num1 + num2;
+            
+            //document.write(reslt+"<br>");
+          
+
+        //}
+        //sumar(20,50)
+        //sumar(70,90)
+let free = false;
+
+        const validarCliente =(time) =>{
+            let edad = prompt("cuantos años tienes");
+            if(edad > 18){
+                if(time >= 2 && time < 7 && free == false){
+                    alert("puede entrar gratis");
+                    free = true;
+
+                }else{
+                    alert("puede entrar pero tiene que pagar");
+                }
+               
+
+                } else{
+                    alert("mira papa, tu eres menor no puede pasar PARIGUAYO");
+
+            }
+
+
+        }
+        validarCliente(6);
+        validarCliente(3);
+        validarCliente(2);
+        validarCliente(6);
+
+
+
+        function saludar(nombre){
+            let frase = `!hola ${nombre}, como esta. `;
+            document.write(frase);
+
+        }  
+        const saludar = function(nombre){
+            let frase = `!hola ${nombre}, como esta. `;
+            document.write(frase);
+
+        }
+        const saludar = (nombre) =>{
+            let frase = `!hola ${nombre}, como esta. `;
+            document.write(frase);
+        }
+
+        saludar("joan");
+
+
+
+ 
+    </script>
+</body>
+</html>

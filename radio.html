@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="radio" id="radio1" name="estudio">sin estudio
+        <br>
+        <input type="radio" id="radio2" name="estudio">estudio primario
+        <br>
+        <input type="radio" id="radio3" name="estudio">estudio secundario
+        <br>
+        <input type="radio" id="radio4" name="estudio">estudio universitario
+        <br>
+        <input type="button" value="mostrar" onclick="mostrarSelecionado()">
+    </form>
+    <script>
+function mostrarSelecionado(){
+    if(document.getElementById("radio1").checked){
+            alert("no tiene estudio");
+
+        }
+    if(document.getElementById("radio2").checked){
+        alert("el estudio es primario");
+
+    }
+    if(document.getElementById("radio3").checked){
+        alert("su estudio es secundario");
+
+    }
+    if(document.getElementById("radio4").checked){
+        alert("eres universitario");
+
+    }
+}
+    </script>
+
+<div>
+    <form action="">
+        <p><textarea name="" id="curriculum" cols="50" rows="10"></textarea></p>
+        <p><input type="button" value="enviar" onclick="mostrar()"></p>
+    </form>
+    <script>
+        function mostrar(){
+            if(document.getElementById("curriculum").value.length < 20){
+                alert("ese curriculum es muy largo  ");
+                
+                }else{
+                    alert("es correcto este curriculum");
+                }
+
+            }
+
+        
+    </script>
+</div>
+</body>
+</html>
